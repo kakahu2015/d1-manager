@@ -9,7 +9,8 @@ const log = debug("assistant");
 log.enabled = true;
 
 const OPENAI_MODEL = env.OPENAI_MODEL || "gpt-3.5-turbo-1106";
-const CFAI_MODEL = env.CFAI_MODEL || "@cf/defog/sqlcoder-7b-2";
+//const CFAI_MODEL = env.CFAI_MODEL || "@cf/defog/sqlcoder-7b-2";
+const CFAI_MODEL = "@cf/defog/sqlcoder-7b-2";
 
 /**
  * Checks the availability of AI models.
