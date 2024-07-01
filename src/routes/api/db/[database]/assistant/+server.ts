@@ -52,16 +52,16 @@ write a raw SQL, without comment`;
 	const get_sql = aid.task(
 		system,
 		z.object({
-			sql: z.string().describe("SQL query"),
+			sql: z.string().describe("You are a SQL expert assistant. Just give the sql statement don't explain"),
 		}),
 		{
 			examples: [
 				[
-					{ text: "show first 10 records in the table" },
+					{ text: "show first 10 records in the table, Just give the sql statement don't explain" },
 					{ sql: `SELECT * FROM \`${tables[0].name}\` LIMIT 10` },
 				],
 				[
-					{ text: "show columns in the table" },
+					{ text: "show columns in the table, Just give the sql statement don't explain" },
 					{
 						sql: `SELECT name, type FROM pragma_table_info('${tables[0].name}')`,
 					},
